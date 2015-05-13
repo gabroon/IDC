@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/fullLayout"
+    >
+
+    <LinearLayout
+        android:id="@+id/buttonView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_margin="0dp"
+        android:padding="0dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="raising awareness"
+            android:background="@drawable/awareness"
+            android:textSize="10dp"
+            android:id="@+id/awarness"
+            android:layout_weight="0.35"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nms"
+            android:background="@drawable/nms"
+            android:text="NMS"
+            android:layout_weight="0.35"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="social"
+            android:id="@+id/social"
+            android:background="@drawable/social"
+            android:layout_weight="0.3"/>
+
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="80dp"
+        android:id="@+id/loading"
+        android:src="@drawable/loading"
+        android:scaleType="centerInside"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        />
+    <WebView
+        android:id="@+id/main_webview"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="465dp"
+        android:layout_below="@id/buttonView"
+        android:visibility="gone"
+        ></WebView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/facebook"
+            android:contentDescription="facebook"
+            android:scaleType="fitStart"
+            android:layout_marginRight="13dp"
+            android:id="@+id/facebookBT" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="twitter"
+            android:scaleType="fitCenter"
+            android:background="@drawable/twitter"
+            android:layout_marginRight="13dp"
+            android:id="@+id/twitterBT"  />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="youtube"
+            android:scaleType="fitCenter"
+            android:background="@drawable/youtube"
+            android:layout_marginRight="13dp"
+            android:id="@+id/youtubeBT"  />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="radio"
+            android:scaleType="fitCenter"
+            android:background="@drawable/radio"
+            android:layout_marginRight="13dp"
+            android:id="@+id/radioBT" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="podcast"
+            android:scaleType="fitCenter"
+            android:background="@drawable/podcast"
+            android:layout_marginRight="13dp"
+            android:id="@+id/podcastBT"  />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="donate"
+            android:background="@drawable/donate"
+            android:layout_marginRight="13dp"
+            android:id="@+id/donateBT"   />
+
+    </LinearLayout>
+</RelativeLayout>

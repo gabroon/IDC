@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IDC</string>
+    <string name="timeline_empty">Loading...</string>
+    <string name="facebook_app_id">417210085070667</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>
