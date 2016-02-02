@@ -1,129 +1,264 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:id="@+id/fullLayout"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     >
+    <!-- <FrameLayout
+         android:id="@+id/content_frame"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" /> -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:id="@+id/fullLayout"
+        >
+
 
     <LinearLayout
-        android:id="@+id/buttonView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:weightSum="1"
-        android:orientation="horizontal"
-        android:layout_margin="0dp"
-        android:padding="0dp">
+            android:id="@+id/buttonView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_margin="0dp"
+            android:padding="0dp">
 
-        <Button
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="raising awareness"
+                android:background="@drawable/awareness"
+                android:textSize="10dp"
+                android:id="@+id/awarness"
+                android:layout_weight="0.35"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/social"
+                android:background="@drawable/social"
+                android:text="social"
+                android:layout_weight="0.35"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NMS"
+                android:id="@+id/nms"
+                android:background="@drawable/nms"
+                android:layout_weight="0.3"/>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:id="@+id/loading"
+            android:src="@drawable/loading"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+        <VideoView
+            android:id="@+id/video_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="raising awareness"
-            android:background="@drawable/awareness"
-            android:textSize="10dp"
-            android:id="@+id/awarness"
-            android:layout_weight="0.35"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            />
+        <!--Images for main videos-->
+        <RelativeLayout
+            android:id="@+id/layoutForMainVidsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_button"
+                android:id="@+id/video1"
+                android:layout_margin="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/logo_IDC"
+                android:src="@drawable/idc_logo_radio"
+                android:scaleType="centerInside"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/video1"
+
+
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_button"
+                android:id="@+id/video2"
+                android:layout_below="@id/logo_IDC"
+                android:layout_margin="10dp"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_button"
+                android:id="@+id/video3"
+                android:layout_toRightOf="@id/video1"
+                android:layout_margin="10dp"
+                />
+
+
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_button"
+                android:id="@+id/video4"
+                android:layout_below="@id/logo_IDC"
+                android:layout_toRightOf="@id/video1"
+                android:layout_margin="10dp"
+                />
+
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/raisingAwarneesButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            layout="@layout/raising_awarness_layout"
             />
 
-        <Button
+        <ListView android:id="@+id/listTwitter"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/nms"
-            android:background="@drawable/nms"
-            android:text="NMS"
-            android:layout_weight="0.35"/>
+            android:layout_height="465dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:divider="@color/DarkSlateGray"
+            android:dividerHeight="@dimen/divider_height"
+            android:drawSelectorOnTop="false"
+            android:visibility="gone"
 
-        <Button
+            />
+        <TextView
+            android:id="@+id/textReplacement"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="social"
-            android:id="@+id/social"
-            android:background="@drawable/social"
-            android:layout_weight="0.3"/>
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:id="@+id/buttonsBar"
+            android:gravity="center">
 
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/facebook"
+                android:contentDescription="facebook"
+                android:scaleType="fitStart"
+                android:layout_marginRight="13dp"
+                android:id="@+id/facebookBT" />
 
-    </LinearLayout>
-    <ImageView
-        android:layout_width="95dp"
-        android:layout_height="80dp"
-        android:id="@+id/loading"
-        android:src="@drawable/loading"
-        android:scaleType="centerInside"
-        android:layout_centerInParent="true"
-        android:visibility="visible"
-        />
-    <WebView
-        android:id="@+id/main_webview"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="465dp"
-        android:layout_below="@id/buttonView"
-        android:visibility="gone"
-        ></WebView>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="twitter"
+                android:scaleType="fitCenter"
+                android:background="@drawable/twitter"
+                android:layout_marginRight="13dp"
+                android:id="@+id/twitterBT"  />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:orientation="horizontal"
-        android:gravity="center">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="youtube"
+                android:scaleType="fitCenter"
+                android:background="@drawable/youtube"
+                android:layout_marginRight="13dp"
+                android:id="@+id/youtubeBT"  />
 
-        <ImageButton
+            <!--<ImageButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:contentDescription="radio"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:background="@drawable/radio"-->
+            <!--android:layout_marginRight="13dp"-->
+            <!--android:id="@+id/radioBT" />-->
+
+            <!--<ImageButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:contentDescription="podcast"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:background="@drawable/podcast"-->
+            <!--android:layout_marginRight="13dp"-->
+            <!--android:id="@+id/podcastBT"  />-->
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="donate"
+                android:background="@drawable/donate1"
+                android:layout_marginRight="13dp"
+                android:id="@+id/donateBT"   />
+
+        </LinearLayout>
+      <!--  <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/facebook"
-            android:contentDescription="facebook"
-            android:scaleType="fitStart"
-            android:layout_marginRight="13dp"
-            android:id="@+id/facebookBT" />
+            android:text="@string/IDCMainPageText"
+            android:textSize="15dp"
+            android:layout_below="@id/layoutForVidsButton"
+            android:layout_margin="15dp"
+            android:layout_above="@id/buttonsBar"/> -->
+        <WebView
+            android:id="@+id/main_webview"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/buttonView"
+            android:layout_above="@id/buttonsBar"
+            android:visibility="gone"
+            android:layout_marginBottom="14dp"
+            ></WebView>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="twitter"
-            android:scaleType="fitCenter"
-            android:background="@drawable/twitter"
-            android:layout_marginRight="13dp"
-            android:id="@+id/twitterBT"  />
+    </RelativeLayout>
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="youtube"
-            android:scaleType="fitCenter"
-            android:background="@drawable/youtube"
-            android:layout_marginRight="13dp"
-            android:id="@+id/youtubeBT"  />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="radio"
-            android:scaleType="fitCenter"
-            android:background="@drawable/radio"
-            android:layout_marginRight="13dp"
-            android:id="@+id/radioBT" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="podcast"
-            android:scaleType="fitCenter"
-            android:background="@drawable/podcast"
-            android:layout_marginRight="13dp"
-            android:id="@+id/podcastBT"  />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="donate"
-            android:background="@drawable/donate"
-            android:layout_marginRight="13dp"
-            android:id="@+id/donateBT"   />
-
-    </LinearLayout>
-</RelativeLayout>
+    <ListView android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2dp"
+        android:background="#fff"/>
+</android.support.v4.widget.DrawerLayout>

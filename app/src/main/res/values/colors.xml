@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="trans">#80000000</color>.
     <color name="white">#FFFFFF</color>
     <color name="yellow">#FFFF00</color>
     <color name="fuchsia">#FF00FF</color>
@@ -162,4 +163,10 @@
 <color name="NMSBlue">#0B85DF</color>
 <color name="Socialred">#d42168</color>
 <color name="SocialLightGreen">#2BDE97</color>
+<color name="list_item_title">#fff</color>
+<color name="list_background">#303030</color>
+<color name="list_background_pressed">#992416</color>
+<color name="list_divider">#272727</color>
+<color name="counter_text_bg">#626262</color>
+<color name="counter_text_color">#c5c4c4</color>
 </resources>

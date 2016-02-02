@@ -1,5 +1,6 @@
 package org.idc.www;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ public class Splash extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = this.getActionBar();
+        actionBar.hide();
         setContentView(R.layout.spalsh);
         Thread timer = new Thread(){
             @Override
@@ -28,5 +31,11 @@ public class Splash extends Activity{
         };
         timer.start();
 
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
     }
 }

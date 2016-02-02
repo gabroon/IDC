@@ -4,4 +4,36 @@
     <string name="facebook_app_id">417210085070667</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="drawer_open">opening</string>
+    <string name="drawer_close">closing</string>
+    <string name="raising"> IDC are at the forefront of CHALLENGING STEREOTYPES AND REMOVING MISCONCEPTIONS surrounding Islam and Muslims in the Northeast. We use various platforms from events and stalls to training and education to promote a better understanding of Islam in the Northeast.\nConnect to the internet to get the latest updates</string>
+    <string name="socialInitiatives">At IDC we seek to help all members of our communities through a range of social initiatives such as the Elderly Care Project, Helping the Homeless, Muslims Give Blood, the Neighbourhood Clean Up, visiting the sick children, the Muslim Snow Patrol and supporting other charities. Our aims is to show that we as Muslims have a positive impact in society among the communities we live in.\n Connect to the internet to get the latest updates</string>
+    <string name="NMS">New Muslim Support (NMS) is a support network for new Muslims in the Northeast. Our objective is to empower, enlighten and educate new Muslims. We offer them one-to-one mentoring, weekly classes and monthly socials. Our aim is to Help them to integrate into the Muslim community, create friendships and seek knowledge.\n Connect to the internet to get the latest updates</string>
+    <string name="aboutUS">IDC North East is an organisation comprised of enthusiastic, vibrant and friendly Muslims eager to share the true message of Islam. We are different people from different walks of life united under one cause. Committed to clarifying misconceptions and devoted to challenging stereotypes. Our mission is to share with the British public the true message of Islam and put smiles on faces!  </string>
+    <string name="contactUs">Phone -  Email -  Visit - </string>
+    <string name="phone">Phone - 0191 645 0990</string>
+    <string name="email">E-mail - newcastle@idcnortheast.org</string>
+    <string name="address">Address - 2 Shipley Avenue, Fenham, Newcastle upon Tyne, NE4 9RA.</string>
+    <string name="joinIDC">If you would like to join the IDC Northeast team in Newcastle or Middlesbrough, please email us at newcastle@idcnortheast.org with your contact details and tell us which projects you would like to volunteer for.</string>
+     <string name="joinIDCShowOnline">If you would like to volunteer for IDC please send your details and we will get back to you as soon as possible.</string>  <!-- Nav Drawer Menu Items -->
+    <string name="joinIDCShowOffline">Sorry but you need internet to send us your details please reconnect to the internet and refresh this page.</string>
+    <string name="donate">To help the islamic diversity centre with their projects and to support them there are multiple ways to donate to IDC :\n
+    1 - donate through <a href="https://mydonate.bt.com/charities/idcnortheast">https://mydonate.bt.com/charities/idcnortheast</a> \n
+    2 - To donate 3£ to IDC write IDCN15 in a message and send to 70070.</string>
+    <string name="IDCMainPageText"> IDC North East is an Islamic Awareness Organisation currently operating in the North East of England. IDC seeks to challenge stereotypes and remove misconceptions surrounding Islam and Muslims through a variety of activities and projects including educational programs and social initiatives. </string>
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >About us</item>
+        <item >About Islam</item>
+        <item >Contact us</item>
+        <item >Join us</item>
+        <item >Donate</item>
+        <item >Our Sponsors</item>
+    </string-array>
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="social_no_internet">No internet connection.Please connect to view this page</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
 </resources>
